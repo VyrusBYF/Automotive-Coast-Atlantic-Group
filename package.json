@@ -1,0 +1,17 @@
+{
+  "name": "automotive-coast-atlantic-group",
+  "version": "1.0.0",
+  "description": "Packages used for technical assignment",
+  "main": "Technical Assignment.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.29.4"
+  },
+  "devDependencies": {
+    "moment-timezone": "^0.5.43"
+  }
+}
