@@ -186,16 +186,15 @@ const timezoneHourDifference = (dateAndTime, timezone1, timezone2) => {
     console.log("You have entered an invalid timezone");
     return;
   }
-  if (!moment1.isValid() || moment2.isValid()) {
+  if (!moment1.isValid() || !moment2.isValid()) {
     console.log("The date you entered is invalid");
     return;
   }
 
-  console.log((moment2.utcOffset() - moment1.utcOffset()) / 60);
-  console.log(moment2.utcOffset());
+  console.log(Math.abs(moment2.utcOffset() - moment1.utcOffset()) / 60);
 };
 
-timezoneHourDifference("03/02/2022 03:45pm", "America/New_York", "America");
+// timezoneHourDifference("03/02/2022 03:45pm", "America/Los_Angeles", "Asia/Shanghai");
 
 /*---------------------------------------------------------------------------------------*/
 
