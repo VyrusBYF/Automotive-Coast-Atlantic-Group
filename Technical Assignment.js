@@ -182,6 +182,10 @@ const timezoneHourDifference = (dateAndTime, timezone1, timezone2) => {
   const moment1 = moment.tz(dateAndTime, `${DATE_FORMAT} hh:mma`, timezone1);
   const moment2 = moment.tz(dateAndTime, `${DATE_FORMAT} hh:mma`, timezone2);
 
+  if (moment.zone(timezone1) === null || moment.tz.zone(timezone2) === null) {
+    console.log("You have entered an invalid timezone");
+    return;
+  }
   if (!moment1.isValid() || moment2.isValid()) {
     console.log("The date you entered is invalid");
     return;
@@ -191,7 +195,7 @@ const timezoneHourDifference = (dateAndTime, timezone1, timezone2) => {
   console.log(moment2.utcOffset());
 };
 
-// timezoneHourDifference("03/02/2022 03:45pm", "America/Los_Angeles", "Asia/Shanghai");
+timezoneHourDifference("03/02/2022 03:45pm", "America/New_York", "America");
 
 /*---------------------------------------------------------------------------------------*/
 
