@@ -204,8 +204,6 @@ const getAllSpecificDays = (year, month, dayOfWeek) => {
   const specificDays = [];
   const target = moment(`${year} ${month}`, "yyyy M").day(dayOfWeek);
 
-  console.log(target);
-
   if (!target.isValid()) {
     console.log("The date you entered is invalid");
     return;
