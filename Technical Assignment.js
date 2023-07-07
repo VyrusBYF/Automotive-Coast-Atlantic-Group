@@ -209,7 +209,7 @@ const getAllSpecificDays = (year, month, dayOfWeek) => {
     return;
   }
 
-  if (target.month() < 2) {
+  if (target.month() < month || target.year() < year) {
     target.add(7, "days");
   }
 
